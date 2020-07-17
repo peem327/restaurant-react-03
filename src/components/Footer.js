@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 
 
-export class Fooder extends Component {
+export class Footer extends Component {
 
     render() {
         return (
@@ -96,4 +96,4 @@ export class Fooder extends Component {
     }
 }
 
-export default Fooder
+export default Footer

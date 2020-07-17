@@ -1,42 +1,43 @@
 import React, { Component } from "react";
-import {Link} from 'react-router-dom'
 
 export class ProductItem extends Component {
   constructor(props) {
     super(props);
-    this.getLocate = this.getLocate.bind(this)
   }
+
   showCard() {
-    if (this.props.products) {
+    try {
+          if (this.props.products) {
       return this.props.products.map((card) => (
-        <div key={card.id} className="col-lg-3 col-md-6 mb-4 d-flex align-items-stretch">
+        <div key={card.id} className="container  col-md-4 mb-4 d-flex align-items-stretch">
+          <button className="Category btn btn-link " type="submit" onClick={()=>this.props.onProductDetail(card)}>
           <div className="card align-items-center">
             <div className="view overlay">
               <img src={card.thumbnail} className="card-img-top"  />
-              <Link href ={()=>this.props.onProductDetail(card)}>
                 <div className="mask rgba-white-slight" />
-              </Link>
+ 
             </div>
             <div className="card-body text-center">
-              <Link href ={()=>this.props.onProductDetail(card)} className="grey-text">
-                <h6> {card.categories} </h6>
-              </Link>
+                <h6 className="grey-text"> {card.categories} </h6>
+
               <h5 className="mb-3">
-                <strong>
-                  <Link href ={()=>this.props.onProductDetail(card)} className="dark-grey-text">
+                <strong className="dark-grey-text">
                     {card.productName}
-                  </Link>
                 </strong>
               </h5>
               <h5 className="font-weight-bold blue-text mb-0">
                 <strong> {card.unitPrice} THB</strong>
               </h5>
-              <button type="button" className="btn btn-success" onClick={()=>this.props.onProductDetail(card)}>คลิก</button>
             </div>
           </div>
+          </button>
         </div>
       ));
     }
+    } catch (error) {
+      
+    }
+
   }
 
   getLocate(card){
@@ -44,8 +45,6 @@ export class ProductItem extends Component {
   }
 
   render() {
-    console.log("props >>>>>>> " + JSON.stringify(this.props))
-    // const {thumbnail, productName, unitPrice, categories} =this.props.product
     return (
       <div>
         <div className="container mt-5">

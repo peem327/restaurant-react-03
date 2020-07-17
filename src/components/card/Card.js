@@ -1,13 +1,13 @@
 import React, { Component } from "react";
 
-class Card extends Component {
-constructor(props) {
-  super(props)
-}
 
+class Card extends Component {
+  constructor(props) {
+    super(props);
+  }
 
   render() {
-    const {thumbnail, productName, detail, unitPrice} =this.props.products;
+    const { thumbnail, productName, detail, unitPrice } = this.props.product;
     return (
       <div>
         <div className="container my-5 py-5 z-depth-1">
@@ -31,7 +31,6 @@ constructor(props) {
                         className="img-fluid"
                       />
                     </div>
-                
                   </div>
                   <a
                     className="carousel-control-prev"
@@ -58,42 +57,35 @@ constructor(props) {
                     <span className="sr-only">Next</span>
                   </a>
                 </div>
-    
               </div>
               <div className="col-lg-5 text-center text-md-left">
                 <h2 className="h2-responsive text-center text-md-left product-name font-weight-bold dark-grey-text mb-1 ml-xl-0 ml-4">
-                {productName}
+                  {productName}
                 </h2>
                 <h3 className="h3-responsive text-center text-md-left mb-5 ml-xl-0 ml-4">
                   <span className="red-text font-weight-bold">
                     <strong>{unitPrice} THB</strong>
                   </span>
-                  <span className="grey-text">
+                  {/* <span className="grey-text">
                     <small>
                       <s>$1789</s>
                     </small>
-                  </span>
+                  </span> */}
                 </h3>
                 <div className="font-weight-normal">
-                  <p className="ml-xl-0 ml-4">
-                 {detail}
-                  </p>
-                  <p className="ml-xl-0 ml-4">
-                    <strong>Storage: </strong>64GB
-                  </p>
-                  <p className="ml-xl-0 ml-4">
-                    <strong>Size: </strong>9.6-inch
-                  </p>
-                  <p className="ml-xl-0 ml-4">
-                    <strong>Resolution: </strong>2048 x 1536
-                  </p>
+                  <p className="ml-xl-0 ml-4">{detail}</p>
                   <p className="ml-xl-0 ml-4">
                     <strong>Availability: </strong>In stock
                   </p>
                   <div className="mt-5">
                     <div className="row mt-3 mb-4">
                       <div className="col-md-12 text-center text-md-left text-md-right">
-                        <button className="btn btn-primary btn-rounded">
+                        <button
+                          className="btn btn-primary btn-rounded"
+                          onClick={() =>
+                            this.props.onAddOrder(this.props.product)
+                          }
+                        >
                           <i
                             className="fas fa-cart-plus mr-2"
                             aria-hidden="true"

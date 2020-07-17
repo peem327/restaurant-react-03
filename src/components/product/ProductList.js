@@ -3,12 +3,14 @@ import React, { Component } from "react";
 import Card from "./../card/Card";
 
 export class ProductList extends Component {
+
   showProduct() {
-    console.log(this.props);
-    if (this.props.products) {
-      return <Card key={this.props.products.id} products={this.props.products} />;
+    try {
+    if (this.props.product) {
+      return <Card key={this.props.product.id} product={this.props.product} onAddOrder={this.props.onAddOrder}/>;
     }
-  }
+  } catch (error) {
+    }}
 
   render() {
     return (

@@ -1,89 +1,159 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
+import Calculator from "./../monitor/Calculator";
 
 export class Navbar extends Component {
   render() {
     return (
       <div>
-        {/*Navbar*/}
-        <nav className="navbar navbar-expand-lg navbar-light light-color">
-          {/* Navbar brand */}
-          <a className="navbar-brand" href="#">
-            Thai food style
-          </a>
-          {/* Collapse button */}
-          <button
-            className="navbar-toggler"
-            type="button"
-            data-toggle="collapse"
-            data-target="#basicExampleNav"
-            aria-controls="basicExampleNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span className="navbar-toggler-icon" />
-          </button>
-          {/* Collapsible content */}
-          <div className="collapse navbar-collapse" id="basicExampleNav">
+        {/* Navbar */}
+        <nav className="navbar navbar-expand-lg navbar-light white scrolling-navbar">
+          <div className="container">
+            {/* Brand */}
+            <Link className="navbar-brand waves-effect" to="/">
+              <strong className="blue-text">Thai Food</strong>
+            </Link>
+            {/* Collapse */}
+            <button
+              className="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span className="navbar-toggler-icon" />
+            </button>
             {/* Links */}
-            <ul className="navbar-nav mx-auto">
-              <li className="nav-item active">
-                <a className="nav-link" href="#">
-                  Home
-                  <span className="sr-only">(current)</span>
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Browse Recipes
-                </a>
-              </li>
-              <li className="nav-item">
-                <a className="nav-link" href="#">
-                  Submit Recipes
-                </a>
-              </li>
-              {/* Dropdown */}
-              <li className="nav-item dropdown">
-                <a
-                  className="nav-link dropdown-toggle"
-                  id="navbarDropdownMenuLink"
-                  data-toggle="dropdown"
-                  aria-haspopup="true"
-                  aria-expanded="false"
-                >
-                  Out Chefs
-                </a>
-                <div
-                  className="dropdown-menu dropdown-primary"
-                  aria-labelledby="navbarDropdownMenuLink"
-                >
-                  <a className="dropdown-item" href="#">
-                    Latest News
-                  </a>
-                  <a className="dropdown-item" href="#">
+            <div
+              className="collapse navbar-collapse"
+              id="navbarSupportedContent"
+            >
+              {/* Left */}
+              <ul className="navbar-nav mr-auto">
+                <li className="nav-item ">
+                  <Link className="nav-link waves-effect" to="/">
+                    Home
+                    <span className="sr-only">(current)</span>
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link waves-effect" to="/about">
+                    About
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link className="nav-link waves-effect" to="/contact">
                     Contact
+                  </Link>
+                </li>
+              </ul>
+              {/* Right */}
+              <ul className="navbar-nav nav-flex-icons">
+                <li className="nav-item">
+                  <button
+                    type="button"
+                    className="nav-link waves-effect"
+                    data-toggle="modal"
+                    data-target="#basicExampleModal"
+                  >
+                    <span className="badge red z-depth-1 mr-1"> 1 </span>
+                    <i className="fas fa-shopping-cart" />
+                    <span className="clearfix d-none d-sm-inline-block">
+                      {" "}
+                      Cart{" "}
+                    </span>
+                  </button>
+                </li>
+
+                <li className="nav-item">
+                  <a
+                    href="https://www.facebook.com/mdbootstrap"
+                    className="nav-link waves-effect"
+                    target="_blank"
+                  >
+                    <i className="fab fa-facebook-f" />
                   </a>
-                  <a className="dropdown-item" href="#">
-                    Something else here
+                </li>
+                <li className="nav-item">
+                  <a
+                    href="https://twitter.com/MDBootstrap"
+                    className="nav-link waves-effect"
+                    target="_blank"
+                  >
+                    <i className="fab fa-twitter" />
                   </a>
-                </div>
-              </li>
-            </ul>
-            {/* Links */}
-            <form className="form-inline">
-              <div className="md-form my-0">
-                <input
-                  className="form-control mr-sm-2"
-                  type="text"
-                  placeholder="Search"
-                  aria-label="Search"
-                />
-              </div>
-            </form>
+                </li>
+                <li className="nav-item">
+                  <a
+                    href="https://github.com/mdbootstrap/bootstrap-material-design"
+                    className="nav-link border border-light rounded waves-effect"
+                    target="_blank"
+                  >
+                    <i className="fab fa-github mr-2" />
+                    MDB GitHub
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          {/* Collapsible content */}
         </nav>
-        {/*/.Navbar*/}
+
+        <div>
+          {/* Modal */}
+          <div
+            className="modal fade"
+            id="basicExampleModal"
+            tabIndex={-1}
+            role="dialog"
+            aria-labelledby="exampleModalLabel"
+            aria-hidden="true"
+          >
+            <div className="modal-dialog" role="document">
+              <div className="modal-content">
+                <div className="modal-header">
+                  <h5 className="modal-title" id="exampleModalLabel">
+                    Modal title
+                  </h5>
+                  <button
+                    type="button"
+                    className="close"
+                    data-dismiss="modal"
+                    aria-label="Close"
+                  >
+                    <span aria-hidden="true">×</span>
+                  </button>
+                </div>
+                <div className="modal-body">
+                  <h1 className="text-right">{this.props.totalPrice}</h1>
+                  <hr />
+                  <ul className="list-unstyled">
+                    {/* {this.props.showOrders(this.props.orders)} */}
+                  </ul>
+                  <hr />
+                </div>
+                <div className="modal-footer">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    data-dismiss="modal"
+                    onClick={() => this.props.onCancelOrder()}
+                  >
+                    Close
+                  </button>
+                  <button
+                    type="button"
+                    className="btn btn-primary"
+                    onClick={() => this.props.onConfirmOrder()}
+                  >
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     );
   }

@@ -6,7 +6,7 @@
         "productName": "Tom Yum Kung",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["food"],
+        "categories": "food",
         "unitPrice": "140"
       },
       {
@@ -15,7 +15,7 @@
         "productName": "Green papaya salad",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["food"],
+        "categories": "food",
         "unitPrice": "140"
       },
       {
@@ -24,7 +24,7 @@
         "productName": "Grilled chicken",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["food"],
+        "categories": "food",
         "unitPrice": "140"
       },
       {
@@ -33,7 +33,7 @@
         "productName": "Pad Thai",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["food"],
+        "categories": "food",
         "unitPrice": "140"
       },
       {
@@ -42,7 +42,7 @@
         "productName": "Green curry",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["food"],
+        "categories": "food",
         "unitPrice": "140"
       },
       {
@@ -51,7 +51,7 @@
         "productName": "Thai Massaman Curryl",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["food"],
+        "categories": "food",
         "unitPrice": "140"
       },
       {
@@ -60,7 +60,7 @@
         "productName": "Bananas",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["dessert"],
+        "categories": "dessert",
         "unitPrice": "140"
       },
       {
@@ -68,7 +68,7 @@
         "thumbnail": "/images/dessert/Sticky-Rice-with Moon-Custard.jpg",
         "productName": "Sticky Rice with Moon Custard",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["dessert"],
+        "categories": "dessert",
         "unitPrice": "140"
       },
       {
@@ -77,7 +77,7 @@
         "productName": "Thong yod",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["dessert"],
+        "categories": "dessert",
         "unitPrice": "140"
       },
       {
@@ -85,7 +85,7 @@
         "thumbnail": "/images/drink/Berry-juice.jpg",
         "productName": "Berry juice",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["drink"],
+        "categories": "drink",
         "unitPrice": "140"
       },
       {
@@ -94,7 +94,7 @@
         "productName": "Mixed vegetable juice",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["drink"],
+        "categories": "drink",
         "unitPrice": "140"
       },
       {
@@ -103,7 +103,7 @@
         "productName": "Strawberry juice",
         "intro": "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
         "detail": "The dragon scale betta is a rarer and higher maintenance fish. It is named by its thick white scales covering his sides that looks like dragon scale armor.",
-        "categories": ["drink"],
+        "categories": "drink",
         "unitPrice": "140"
       }
     ]
