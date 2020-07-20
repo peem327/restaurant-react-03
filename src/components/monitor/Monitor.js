@@ -115,7 +115,7 @@ export class Monitor extends Component {
 
         <ProductList onAddOrder={this.addOrder} product={this.props.product} showOrders={this.showOrders} onCancelOrder={this.cancelOrder}
           onConfirmOrder={this.confirmOrder} />
-        {showModel}
+      
         {/* <Calculator
           totalPrice={this.state.totalPrice}
           showOrders={this.showOrders}
