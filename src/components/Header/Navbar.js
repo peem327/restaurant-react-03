@@ -52,7 +52,7 @@ export class Navbar extends Component {
               {/* Right */}
               <ul className="navbar-nav nav-flex-icons">
                 <li className="nav-item">
-                  <button
+                  <div
                     type="button"
                     className="nav-link waves-effect"
                     data-toggle="modal"
@@ -64,36 +64,7 @@ export class Navbar extends Component {
                       {" "}
                       Cart{" "}
                     </span>
-                  </button>
-                </li>
-
-                <li className="nav-item">
-                  <a
-                    href="https://www.facebook.com/mdbootstrap"
-                    className="nav-link waves-effect"
-                    target="_blank"
-                  >
-                    <i className="fab fa-facebook-f" />
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    href="https://twitter.com/MDBootstrap"
-                    className="nav-link waves-effect"
-                    target="_blank"
-                  >
-                    <i className="fab fa-twitter" />
-                  </a>
-                </li>
-                <li className="nav-item">
-                  <a
-                    href="https://github.com/mdbootstrap/bootstrap-material-design"
-                    className="nav-link border border-light rounded waves-effect"
-                    target="_blank"
-                  >
-                    <i className="fab fa-github mr-2" />
-                    MDB GitHub
-                  </a>
+                  </div>
                 </li>
               </ul>
             </div>
