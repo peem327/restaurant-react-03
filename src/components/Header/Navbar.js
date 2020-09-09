@@ -5,9 +5,9 @@ import Calculator from "./../monitor/Calculator";
 export class Navbar extends Component {
   render() {
     return (
-      <div>
+      <div className="">
         {/* Navbar */}
-        <nav className="navbar navbar-expand-lg navbar-light white scrolling-navbar">
+        <nav className="navbar navbar-expand-lg navbar-light white scrolling-navbar ">
           <div className="container">
             {/* Brand */}
             <Link className="navbar-brand waves-effect" to="/">

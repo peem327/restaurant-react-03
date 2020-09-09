@@ -10,22 +10,24 @@ export class Category extends Component {
     super(props);
 
     this.state = {
-      products: null,
+      // products: null,
     };
     this.ProductDetail = this.ProductDetail.bind(this);
   }
 
   componentDidMount() {
-    // this.props.productsFetch();
-    axios
-      .get(
-        `http://localhost:3004/blogs?categories=${this.props.match.params.categories}`
-      )
-      .then((res) => {
-        this.setState({
-          products: res.data,
-        });
-      });
+    if (this.props.match.params.categories) {
+      this.props.productsFetch(this.props.match.params.categories);
+    }
+    // axios
+    //   .get(
+    //     `http://localhost:3004/blogs?categories=${this.props.match.params.categories}`
+    //   )
+    //   .then((res) => {
+    //     this.setState({
+    //       products: res.data,
+    //     });
+    //   });
   }
 
   ProductDetail(product) {
@@ -37,16 +39,17 @@ export class Category extends Component {
       <div>
         {/* <Category products={this.state.products}/> */}
         <ProductItem
-          products={this.state.products}
+          // products={this.state.products}
+          products={this.props.products}
           onProductDetail={this.ProductDetail}
         />
       </div>
     );
   }
 }
-// const mapStateToProps =({products}) => ({
-//   products
-// })
-// export default connect(mapStateToProps, {productsFetch}) (Category);
+const mapStateToProps = ({ products }) => ({
+  products,
+});
+export default connect(mapStateToProps, { productsFetch })(Category);
 
-export default Category;
+// export default Category;

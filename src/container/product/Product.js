@@ -3,14 +3,14 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { productFetch } from "./../../actions";
 import ProductList from "./../../components/product/ProductList";
-import Monitor from './../../components/monitor/Monitor';
+import Monitor from "./../../components/monitor/Monitor";
 
 class Product extends Component {
-  constructor(props){
-    super(props)
+  constructor(props) {
+    super(props);
     this.state = {
-      products : ''
-    }
+      // products : ''
+    };
   }
 
   componentDidMount() {
@@ -19,26 +19,23 @@ class Product extends Component {
     //       this.setState({
     //         products : res.data
     //       })
-       
+
     // })
 
     if (this.props.match.params.id) {
       this.props.productFetch(this.props.match.params.id);
     }
-      
   }
 
   render() {
     return (
       <div>
-        <Monitor product={this.props.products}/>
+        <Monitor product={this.props.products} />
       </div>
     );
   }
 }
-const mapStateToProps =({products}) => ({
-  products
-})
-export default connect(mapStateToProps, { productFetch })(
-  Product
-);
+const mapStateToProps = ({ products }) => ({
+  products,
+});
+export default connect(mapStateToProps, { productFetch })(Product);
