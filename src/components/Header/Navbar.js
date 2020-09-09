@@ -1,19 +1,16 @@
-import React, { Component } from "react";
-import { Link } from "react-router-dom";
-import Calculator from "./../monitor/Calculator";
+import React, { Component } from "./node_modules/react";
+import { Link } from "./node_modules/react-router-dom";
+// import Calculator from "../monitor/Calculator";
 
 export class Navbar extends Component {
   render() {
     return (
-      <div className="">
-        {/* Navbar */}
-        <nav className="navbar navbar-expand-lg navbar-light white scrolling-navbar ">
+      <div>
+        <nav className="navbar navbar-expand-lg navbar-light white scrolling-navbar">
           <div className="container">
-            {/* Brand */}
             <Link className="navbar-brand waves-effect" to="/">
               <strong className="blue-text">Thai Food</strong>
             </Link>
-            {/* Collapse */}
             <button
               className="navbar-toggler"
               type="button"
@@ -25,12 +22,10 @@ export class Navbar extends Component {
             >
               <span className="navbar-toggler-icon" />
             </button>
-            {/* Links */}
             <div
               className="collapse navbar-collapse"
               id="navbarSupportedContent"
             >
-              {/* Left */}
               <ul className="navbar-nav mr-auto">
                 <li className="nav-item ">
                   <Link className="nav-link waves-effect" to="/">
@@ -49,10 +44,9 @@ export class Navbar extends Component {
                   </Link>
                 </li>
               </ul>
-              {/* Right */}
               <ul className="navbar-nav nav-flex-icons">
                 <li className="nav-item">
-                  <div
+                  <button
                     type="button"
                     className="nav-link waves-effect"
                     data-toggle="modal"
@@ -64,7 +58,36 @@ export class Navbar extends Component {
                       {" "}
                       Cart{" "}
                     </span>
-                  </div>
+                  </button>
+                </li>
+
+                <li className="nav-item">
+                  <a
+                    href="https://www.facebook.com/mdbootstrap"
+                    className="nav-link waves-effect"
+                    target="_blank"
+                  >
+                    <i className="fab fa-facebook-f" />
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a
+                    href="https://twitter.com/MDBootstrap"
+                    className="nav-link waves-effect"
+                    target="_blank"
+                  >
+                    <i className="fab fa-twitter" />
+                  </a>
+                </li>
+                <li className="nav-item">
+                  <a
+                    href="https://github.com/mdbootstrap/bootstrap-material-design"
+                    className="nav-link border border-light rounded waves-effect"
+                    target="_blank"
+                  >
+                    <i className="fab fa-github mr-2" />
+                    MDB GitHub
+                  </a>
                 </li>
               </ul>
             </div>
@@ -109,14 +132,14 @@ export class Navbar extends Component {
                     type="button"
                     className="btn btn-secondary"
                     data-dismiss="modal"
-                    onClick={() => this.props.onCancelOrder()}
+                    // onClick={() => this.props.onCancelOrder()}
                   >
                     Close
                   </button>
                   <button
                     type="button"
                     className="btn btn-primary"
-                    onClick={() => this.props.onConfirmOrder()}
+                    // onClick={() => this.props.onConfirmOrder()}
                   >
                     Save changes
                   </button>

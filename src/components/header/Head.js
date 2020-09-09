@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { Component } from "./node_modules/react";
 
 export class Head extends Component {
   render() {
     return (
-      <div className="">
+      <div>
         <div
           id="carouselExampleFade"
           className="carousel slide carousel-fade"
@@ -11,7 +11,11 @@ export class Head extends Component {
         >
           <div className="carousel-inner">
             <div className="carousel-item active">
-              <img src="images/bg/1.jpg" className="d-block w-100" alt="..." />
+              <img
+                src="images/bg/1.jpg"
+                className="d-block w-100"
+                alt="..."
+              />
               <div className="carousel-caption d-none d-md-block shadow-lg p-5 mb-5 rounded">
                 <h1 className="font-Regular">Tom Yum Kung</h1>
                 <h4>
@@ -22,7 +26,11 @@ export class Head extends Component {
               </div>
             </div>
             <div className="carousel-item">
-              <img src="images/bg/2.jpg" className="d-block w-100" alt="..." />
+              <img
+                src="images/bg/2.jpg"
+                className="d-block w-100"
+                alt="..."
+              />
               <div className="carousel-caption d-none d-md-block shadow-lg p-5 mb-5 rounded ">
                 <h1 className="font-Regular">Green papaya salad</h1>
                 <h4>
@@ -33,7 +41,11 @@ export class Head extends Component {
               </div>
             </div>
             <div className="carousel-item">
-              <img src="images/bg/3.jpg" className="d-block w-100" alt="..." />
+              <img
+                src="images/bg/3.jpg"
+                className="d-block w-100"
+                alt="..."
+              />
               <div className="carousel-caption d-none d-md-block shadow-lg p-5 mb-5 rounded">
                 <h1 className="font-Regular">Grilled chicken</h1>
                 <h4>

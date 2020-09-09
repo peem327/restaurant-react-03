@@ -5,7 +5,6 @@ export class About extends Component {
     return (
       <div>
         <div className="container my-5">
-          {/* Section: Block Content */}
           <section className="dark-grey-text">
             <h3 className="text-center font-weight-bold mb-4 pb-2">
               Our best projects
@@ -15,9 +14,7 @@ export class About extends Component {
               error amet numquam iure provident voluptate esse quasi, veritatis
               totam voluptas nostrum quisquam eum porro a pariatur veniam.
             </p>
-            {/* Grid row */}
             <div className="row">
-              {/* Grid column */}
               <div className="col-lg-5 mb-lg-0 mb-5">
                 <img
                   src="https://mdbootstrap.com/img/Photos/Others/images/83.jpg"
@@ -25,8 +22,6 @@ export class About extends Component {
                   alt="Sample project image"
                 />
               </div>
-              {/* Grid column */}
-              {/* Grid column */}
               <div className="col-lg-7">
                 <ul className="list-unstyled fa-ul mb-0">
                   <li className="d-flex justify-content-center pl-4">
