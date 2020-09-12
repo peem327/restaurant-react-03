@@ -3,7 +3,7 @@ import axios from "axios";
 import { connect } from "react-redux";
 import { productFetch } from "./../../actions";
 import ProductList from "./../../components/product/ProductList";
-import Monitor from "./../../components/monitor/Monitor";
+
 
 class Product extends Component {
   constructor(props) {
@@ -30,7 +30,7 @@ class Product extends Component {
   render() {
     return (
       <div>
-        <Monitor product={this.props.products} />
+        <ProductList product={this.props.products} />
       </div>
     );
   }

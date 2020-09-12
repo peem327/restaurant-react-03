@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import Head from "../components/header/Head";
+import Head from "./../components/Head"
 import Social from "./../components/body/Social";
 import Categories from "../components/body/Categories";
 import NewsFeed from "../components/body/NewsFeed";
@@ -26,7 +26,7 @@ export class Home extends Component {
   render() {
     return (
       <div>
-        {/* <Head /> */}
+        <Head />
         <Categories onProductCategory={this.productCategory} />
         <NewsFeed />
         <Social />
